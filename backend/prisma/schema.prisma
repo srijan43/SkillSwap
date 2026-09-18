@@ -1,0 +1,282 @@
+// SkillSwap — Prisma schema.
+//
+// Notes:
+// - Money is stored in integer paise (₹1 = 100 paise) to avoid floating-point drift on totals
+//   and ledger balances.
+// - Escrow state is always derived from EscrowLedgerEntry, not from a mutable
+//   flag on Booking. `balanceAfter` on each entry lets us read the current
+//   held amount in O(1) via the newest entry per booking.
+// - Booking IDs use a human-readable ORD- prefix so seed rows can match the
+//   IDs already shown in the frontend copy.
+
+generator client {
+  provider      = "prisma-client-js"
+  // Native for local dev; the debian target covers Render, Railway, Fly (Debian slim);
+  // the musl target covers Alpine base images (Fly's default) — add whichever your
+  // deploy uses, or leave both to be safe.
+  binaryTargets = ["native", "debian-openssl-3.0.x", "linux-musl-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum GigStatus {
+  DRAFT
+  PUBLISHED
+  PAUSED
+  ARCHIVED
+}
+
+enum BookingStatus {
+  PENDING
+  ACCEPTED
+  DECLINED
+  IN_PROGRESS
+  DELIVERED
+  APPROVED
+  DISPUTED
+  COMPLETED
+  CANCELLED
+}
+
+enum DeliveryPace {
+  STANDARD
+  RUSH
+}
+
+enum LedgerType {
+  HOLD
+  RELEASE
+  REFUND
+  ADJUSTMENT
+  PLATFORM_FEE
+}
+
+enum MilestoneStatus {
+  PENDING
+  IN_PROGRESS
+  COMPLETED
+}
+
+enum ActivityType {
+  BOOKING_CREATED
+  BOOKING_ACCEPTED
+  BOOKING_DECLINED
+  BOOKING_DELIVERED
+  BOOKING_APPROVED
+  BOOKING_DISPUTED
+  BOOKING_CANCELLED
+  ESCROW_HELD
+  ESCROW_RELEASED
+  ESCROW_REFUNDED
+  REVIEW_POSTED
+  GIG_PUBLISHED
+  MILESTONE_UPDATED
+}
+
+model User {
+  id            String   @id @default(cuid())
+  handle        String   @unique
+  name          String
+  avatarUrl     String?
+  bio           String?
+  city          String?
+  isCreator     Boolean  @default(true)
+  toolStack     String[] @default([])
+  skillsOffered String[] @default([])
+
+  // Cached rollups. Recomputed on booking completion / review write.
+  successScore   Float @default(0) // 0-100 composite (see services/successScore.ts)
+  responseHours  Float @default(24) // Average time to respond to booking requests.
+  gigsCompleted  Int   @default(0)
+  ratingAverage  Float @default(0)
+  reviewCount    Int   @default(0)
+  activeBookings Int   @default(0)
+
+  createdAt DateTime @default(now())
+
+  gigs              Gig[]
+  bookingsAsClient  Booking[]       @relation("Client")
+  bookingsAsCreator Booking[]       @relation("Creator")
+  reviews           Review[]
+  activityEvents    ActivityEvent[]
+
+  @@index([isCreator, successScore])
+}
+
+model Category {
+  id         String @id @default(cuid())
+  name       String
+  slug       String @unique
+  colorToken String // One of the 6 brand hub colors: brand-pink | brand-teal | brand-lavender | brand-peach | brand-ochre | brand-mint
+  iconName   String // Material icon key rendered in the specialist hub card.
+  gigCount   Int    @default(0) // Cached for the "340+ Gigs" pill; recomputed by trending job.
+
+  gigs Gig[]
+}
+
+model Gig {
+  id             String    @id @default(cuid())
+  creatorId      String
+  creator        User      @relation(fields: [creatorId], references: [id], onDelete: Cascade)
+  title          String
+  slug           String    @unique
+  categoryId     String
+  category       Category  @relation(fields: [categoryId], references: [id])
+  description    String    @db.Text // Markdown.
+  disciplineTags String[]  @default([])
+  turnaroundDays Int       @default(3)
+  status         GigStatus @default(PUBLISHED)
+  coverBadge     String? // "Popular" | "Fast Delivery" | "Escrow"; shown as small tag on gig card.
+
+  viewCount     Int   @default(0)
+  bookingCount  Int   @default(0)
+  ratingAverage Float @default(0)
+  reviewCount   Int   @default(0)
+  trendingScore Float @default(0)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  tiers    GigTier[]
+  media    GigMedia[]
+  reviews  Review[]
+  bookings Booking[]
+
+  @@index([status, trendingScore])
+  @@index([categoryId, status])
+  @@index([creatorId, status])
+}
+
+model GigTier {
+  id           String   @id @default(cuid())
+  gigId        String
+  gig          Gig      @relation(fields: [gigId], references: [id], onDelete: Cascade)
+  name         String // "Basic" | "Standard" | "Pro"
+  slug         String // basic | standard | premium
+  price        Int // paise
+  deliverables String[]
+  revisions    Int      @default(1)
+  deliveryDays Int      @default(3)
+  isFeatured   Boolean  @default(false) // Marks the "Popular" middle tier on gig-details.
+
+  bookings Booking[]
+
+  @@unique([gigId, slug])
+}
+
+model GigMedia {
+  id       String  @id @default(cuid())
+  gigId    String
+  gig      Gig     @relation(fields: [gigId], references: [id], onDelete: Cascade)
+  url      String
+  type     String  @default("image") // image | video | model
+  position Int     @default(0)
+  caption  String?
+
+  @@index([gigId, position])
+}
+
+model Review {
+  id        String   @id @default(cuid())
+  gigId     String
+  gig       Gig      @relation(fields: [gigId], references: [id], onDelete: Cascade)
+  bookingId String?  @unique
+  booking   Booking? @relation(fields: [bookingId], references: [id])
+  clientId  String
+  client    User     @relation(fields: [clientId], references: [id])
+  rating    Int // 1-5
+  comment   String
+  createdAt DateTime @default(now())
+
+  @@index([gigId, createdAt])
+}
+
+model Booking {
+  id String @id // e.g. "ORD-8921" — generated in the booking service.
+
+  gigId  String
+  gig    Gig     @relation(fields: [gigId], references: [id])
+  tierId String
+  tier   GigTier @relation(fields: [tierId], references: [id])
+
+  clientId  String
+  client    User   @relation("Client", fields: [clientId], references: [id])
+  creatorId String
+  creator   User   @relation("Creator", fields: [creatorId], references: [id])
+
+  briefText    String       @db.Text
+  attachments  String[]     @default([]) // URLs of uploaded reference files.
+  deliveryPace DeliveryPace @default(STANDARD)
+
+  // Money snapshot at booking time; the tier price can change later without
+  // moving the customer's total. All values in paise (₹1 = 100 paise).
+  priceAtBooking Int
+  rushSurcharge  Int @default(0)
+  platformFee    Int
+  totalCharged   Int
+
+  status BookingStatus @default(PENDING)
+
+  dueAt       DateTime?
+  acceptedAt  DateTime?
+  deliveredAt DateTime?
+  approvedAt  DateTime?
+  completedAt DateTime?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  milestones Milestone[]
+  ledger     EscrowLedgerEntry[]
+  review     Review?
+
+  @@index([creatorId, status])
+  @@index([clientId, status])
+  @@index([status, createdAt])
+}
+
+model Milestone {
+  id             String          @id @default(cuid())
+  bookingId      String
+  booking        Booking         @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+  title          String
+  status         MilestoneStatus @default(PENDING)
+  position       Int
+  dueDate        DateTime?
+  deliverableUrl String?
+  completedAt    DateTime?
+
+  @@index([bookingId, position])
+}
+
+model EscrowLedgerEntry {
+  id           String     @id @default(cuid())
+  bookingId    String
+  booking      Booking    @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+  type         LedgerType
+  // Signed: positive for HOLD/ADJUSTMENT, negative for RELEASE/REFUND/PLATFORM_FEE.
+  amount       Int
+  // Running balance held in escrow for this booking after this entry lands.
+  // Non-negative; enforced by the service that writes entries.
+  balanceAfter Int
+  memo         String?
+  createdAt    DateTime   @default(now())
+
+  @@index([bookingId, createdAt])
+}
+
+model ActivityEvent {
+  id        String       @id @default(cuid())
+  userId    String
+  user      User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  type      ActivityType
+  bookingId String?
+  gigId     String?
+  payload   Json?
+  createdAt DateTime     @default(now())
+
+  @@index([userId, createdAt])
+}

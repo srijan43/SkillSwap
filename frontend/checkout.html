@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>SkillSwap - Creator Economy Marketplace</title><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary": "#000000", "tertiary-fixed": "#ffd9e0", "tertiary-container": "#3f0019", "surface": "#fef9ef", "on-background": "#1d1c16", "hairline-soft": "#f0f0f0", "on-secondary": "#ffffff", "on-dark-soft": "#a0a0a0", "primary-fixed": "#e5e2e1", "primary-fixed-dim": "#c9c6c5", "on-error": "#ffffff", "success": "#22c55e", "secondary-container": "#c4e6e6", "on-primary-container": "#858383", "error": "#ef4444", "on-surface-variant": "#444748", "on-tertiary-fixed": "#3f0019", "primary-disabled": "#e5e5e5", "surface-dim": "#dedad0", "tertiary": "#000000", "on-secondary-fixed": "#002020", "surface-soft": "#faf5e8", "inverse-surface": "#32302a", "primary-container": "#1c1b1b", "brand-mint": "#a4d4c5", "surface-bright": "#fef9ef", "on-tertiary-container": "#ed3e7e", "surface-tint": "#5f5e5e", "muted": "#6a6a6a", "hairline": "#e5e5e5", "canvas": "#fffaf0", "inverse-primary": "#c9c6c5", "surface-container-low": "#f8f3e9", "surface-container-highest": "#e7e2d8", "on-primary": "#ffffff", "surface-card": "#f5f0e0", "body": "#3a3a3a", "background": "#fef9ef", "surface-container": "#f2ede4", "on-dark": "#ffffff", "on-tertiary-fixed-variant": "#8f0042", "secondary-fixed": "#c7e9e8", "surface-strong": "#ebe6d6", "inverse-on-surface": "#f5f0e6", "on-error-container": "#93000a", "error-container": "#ffdad6", "muted-soft": "#9a9a9a", "primary-active": "#1f1f1f", "on-surface": "#1d1c16", "ink": "#0a0a0a", "brand-peach": "#ffb084", "brand-ochre": "#e8b94a", "on-secondary-fixed-variant": "#2d4c4c", "surface-container-lowest": "#ffffff", "secondary": "#446464", "secondary-fixed-dim": "#abcdcc", "body-strong": "#1a1a1a", "on-primary-fixed-variant": "#474646", "outline-variant": "#c4c7c7", "on-tertiary": "#ffffff", "brand-pink": "#ff4d8b", "tertiary-fixed-dim": "#ffb1c3", "warning": "#f59e0b", "surface-variant": "#e7e2d8", "surface-container-high": "#ece8de", "brand-lavender": "#b8a4ed", "on-primary-fixed": "#1c1b1b", "surface-dark": "#0a1a1a", "outline": "#747878", "brand-teal": "#1a3a3a", "surface-dark-elevated": "#1a2a2a", "on-secondary-container": "#496868", "brand-coral": "ff6b5a" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "margin-sm": "1.25rem", "space-md": "1rem", "space-xs": "0.25rem", "space-xl": "2rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "margin": "3rem", "gutter-sm": "1rem", "gutter": "1.5rem" }, fontFamily: { "caption-uppercase": ["Inter"], "display-sm": ["Plus Jakarta Sans"], "display-xl-mobile": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "body-sm": ["Inter"], "display-md": ["Plus Jakarta Sans"], "display-lg-mobile": ["Plus Jakarta Sans"], "caption": ["Inter"], "display-xl": ["Plus Jakarta Sans"], "button": ["Inter"], "title-sm": ["Inter"], "nav-link": ["Inter"], "title-md": ["Inter"], "title-lg": ["Inter"], "display-md-mobile": ["Plus Jakarta Sans"], "body-md": ["Inter"] }, fontSize: { "caption-uppercase": ["12px", { lineHeight: "1.4", letterSpacing: "1.5px", fontWeight: "600" }], "display-sm": ["32px", { lineHeight: "1.15", letterSpacing: "-0.5px", fontWeight: "600" }], "display-xl-mobile": ["44px", { lineHeight: "1.05", letterSpacing: "-1.5px", fontWeight: "600" }], "display-lg": ["56px", { lineHeight: "1.05", letterSpacing: "-2px", fontWeight: "600" }], "body-sm": ["14px", { lineHeight: "1.55", letterSpacing: "0px", fontWeight: "400" }], "display-md": ["40px", { lineHeight: "1.1", letterSpacing: "-1px", fontWeight: "600" }], "display-lg-mobile": ["36px", { lineHeight: "1.1", letterSpacing: "-1px", fontWeight: "600" }], "caption": ["13px", { lineHeight: "1.4", letterSpacing: "0px", fontWeight: "500" }], "display-xl": ["72px", { lineHeight: "1", letterSpacing: "-2.5px", fontWeight: "600" }], "button": ["14px", { lineHeight: "1", letterSpacing: "0px", fontWeight: "600" }], "title-sm": ["16px", { lineHeight: "1.4", letterSpacing: "0px", fontWeight: "600" }], "nav-link": ["14px", { lineHeight: "1.4", letterSpacing: "0px", fontWeight: "500" }], "title-md": ["18px", { lineHeight: "1.4", letterSpacing: "0px", fontWeight: "600" }], "title-lg": ["24px", { lineHeight: "1.3", letterSpacing: "-0.3px", fontWeight: "600" }], "display-md-mobile": ["30px", { lineHeight: "1.15", letterSpacing: "-0.5px", fontWeight: "600" }], "body-md": ["16px", { lineHeight: "1.55", letterSpacing: "0px", fontWeight: "400" }] } } } };</script></head><body class="bg-canvas font-body-md text-body min-h-screen flex flex-col selection:bg-brand-mint selection:text-ink"><header class="fixed top-0 left-0 w-full z-50 bg-canvas/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 max-w-7xl mx-auto px-gutter flex items-center justify-center gap-space-md xl:gap-space-lg"><a class="hidden xl:inline-flex items-center px-space-md py-1.5 font-nav-link text-nav-link text-on-surface-variant hover:text-ink hover:bg-surface-card rounded-full transition-all duration-150" data-path="marketplace" href="index.html">Explore Marketplace</a><a class="hidden xl:inline-flex items-center px-space-md py-1.5 font-nav-link text-nav-link text-on-surface-variant hover:text-ink hover:bg-surface-card rounded-full transition-all duration-150" data-path="post-a-gig" href="post-gig.html">Post a Gig</a><a class="flex items-center gap-space-sm group" data-path="marketplace" href="index.html"><img alt="SkillSwap Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VtuUSGDnKXm_MHWk_C8t2G6IMHwA4vTDoUnMEjlQOR_uQaHaJDmQWtb5EXqqc5_mydbLjxJmXXgaIeXqZiaRW5RdvkRI8wna9nGS1sLrJl3OovsXsLsdWAL0vriGttOPde3VXlLkjn5TnmYIgCmjf6F0uRWYUwbKdjV7l3cQLCVCQZzYY8zGgayfoy4baFt6tfuyQseSrM5dV79KvnkMNBozVFxw37b9fh_VA63zzg28e9Qs8bDzG0FQ"/><span class="font-display-sm text-title-md text-ink tracking-tight font-bold">SkillSwap</span></a><a class="hidden xl:inline-flex items-center px-space-md py-1.5 font-nav-link text-nav-link text-on-surface-variant hover:text-ink hover:bg-surface-card rounded-full transition-all duration-150" data-path="creator-dashboard" href="dashboard.html">Creator Dashboard</a><a aria-current="page" class="hidden xl:inline-flex items-center px-space-md py-1.5 transition-all duration-150 bg-surface-strong text-ink font-semibold rounded-full" data-path="my-bookings" href="bookings.html">My Bookings</a></div></header><main class="w-full pt-16 bg-canvas flex-1"><div class="flex flex-col w-full">
+<!-- Subtle decorative ambient blobs -->
+<div class="relative w-full max-w-7xl mx-auto px-gutter py-space-lg lg:py-space-xl">
+<!-- Top breadcrumb & status trail -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm mb-space-lg">
+<div class="flex items-center gap-2">
+<a class="font-caption text-caption text-muted hover:text-ink transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[16px]">arrow_back</span> Marketplace
+        </a>
+<span class="font-caption text-caption text-muted-soft">/</span>
+<span class="font-caption text-caption text-muted">Mila Fontaine</span>
+<span class="font-caption text-caption text-muted-soft">/</span>
+<span class="font-caption text-caption text-ink font-semibold">Checkout &amp; Escrow</span>
+</div>
+<div class="inline-flex items-center gap-2 bg-surface-container px-3 py-1 rounded-full shadow-sm">
+<span class="w-2 h-2 rounded-full bg-success animate-pulse"></span>
+<span class="font-caption text-caption text-ink font-semibold">Milestone Escrow Active</span>
+<span class="text-muted-soft text-[11px] font-caption">| 256-bit Encrypted</span>
+</div>
+</div>
+<!-- Main Two-Column Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN: Project Brief & Terms (7 Cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<!-- Order Summary Hero Banner (Warm Tactile Card) -->
+<div class="bg-surface-card rounded-2xl p-space-lg shadow-sm relative overflow-hidden">
+<div class="flex flex-col sm:flex-row items-start sm:items-center gap-space-md justify-between">
+<div class="flex items-center gap-space-md">
+<div class="relative w-16 h-16 rounded-2xl overflow-hidden bg-brand-peach/30 shrink-0 shadow-md">
+<img class="w-full h-full object-cover" data-alt="Close up artisan clay sculpture portrait of a chic female digital artist with pastel glasses and soft warm studio lighting, styled in playful tactile claymation aesthetic on cream background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiJKApULW0Cpq-ym2uU3BwlmHvLZAXAatILwfV18ZpgKKfi9aX_6a8D44-SZq3QeGk-JMH0sxTTHanP-k1_hwA-fJGZxvKczGqGU3C6YHxMlRd9i9oJrBVHztisATWe6o0aMuYX-zTxnON-ZHNfFxnZFJFrjnBAd-KfWljVFY32fJfZ_HkSKB_nfUzm6XnBDX6IjX3T9Ujb4ew9kBEB65nf9YL-ee_6J-947hdwDKRtPvLhPTEKiMW"/>
+<span class="absolute bottom-1 right-1 bg-brand-mint text-ink text-[9px] font-caption font-bold px-1 py-0.5 rounded-full shadow-sm">PRO</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-caption-uppercase text-caption-uppercase text-secondary font-semibold">CREATOR CONTRACT</span>
+<span class="font-caption text-[11px] px-2 py-0.5 bg-brand-ochre/25 text-ink rounded-full font-medium">Standard Tier</span>
+</div>
+<h1 class="font-title-lg text-title-lg text-ink font-bold tracking-tight">Booking Mila Fontaine</h1>
+<p class="font-body-sm text-body-sm text-muted">3D Character Modeling • High-Poly Mesh &amp; Textures</p>
+</div>
+</div>
+<div class="sm:text-right bg-surface-soft px-3 py-2 rounded-xl">
+<div class="font-caption text-caption text-muted">Fixed Escrow</div>
+<div class="font-display-sm text-title-lg text-ink font-bold" id="heroPriceDisplay">₹26,560</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex flex-wrap items-center gap-y-2 gap-x-space-md text-caption font-caption text-muted">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-brand-mint">check_circle</span>
+<span class="text-ink font-medium">3 Revision Rounds</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-brand-mint">check_circle</span>
+<span class="text-ink font-medium">Commercial Rights</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-brand-mint">check_circle</span>
+<span class="text-ink font-medium">Native .Blend + .GLB</span>
+</div>
+</div>
+</div>
+<!-- Project Brief Form Container -->
+<div class="bg-surface-container-low rounded-2xl p-space-lg shadow-sm flex flex-col gap-space-lg">
+<!-- Section 1: Briefing -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-title-sm text-title-sm text-ink font-semibold flex items-center gap-2" for="projectBrief">
+<span class="w-6 h-6 rounded-full bg-ink text-on-primary flex items-center justify-center text-[12px] font-bold">1</span>
+                Project Direction &amp; Brief
+              </label>
+<span class="font-caption text-caption text-muted-soft">Required</span>
+</div>
+<p class="font-body-sm text-body-sm text-muted">Describe character backstory, silhouette references, surface roughness, and your target render engine.</p>
+<textarea class="w-full mt-2 p-space-md rounded-xl bg-canvas text-body font-body-md text-body-md shadow-sm focus:outline-none focus:ring-2 focus:ring-ink transition-all placeholder:text-muted-soft resize-y" id="projectBrief" placeholder="e.g. We need a quirky mascot for our Web3 payments app: rounded clay proportions, tactile matte vinyl finish, holding a vintage credit token..." rows="4">A whimsical mascot character for our creator onboarding workflow. Style must emulate tactile matte clay with subtle thumbprint textures, soft pastel lilac and cream tones, ready for mobile game engine export (.GLB).</textarea>
+</div>
+<!-- Section 2: File Upload / Asset Vault Dropzone -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-title-sm text-title-sm text-ink font-semibold flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-ink text-on-primary flex items-center justify-center text-[12px] font-bold">2</span>
+              Reference Assets &amp; Specs
+            </label>
+<p class="font-body-sm text-body-sm text-muted">Upload style moodboards, brand palettes, or existing turnarounds (PNG, JPG, GLB up to 50MB).</p>
+<div class="mt-2 bg-surface-soft hover:bg-surface-card rounded-2xl p-space-lg flex flex-col items-center justify-center text-center cursor-pointer transition-all group shadow-sm" id="dropzoneArea">
+<div class="w-14 h-14 rounded-2xl bg-brand-lavender/30 text-ink flex items-center justify-center mb-space-sm group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[28px]">cloud_upload</span>
+</div>
+<p class="font-title-sm text-title-sm text-ink font-semibold mb-1">
+                Drag &amp; drop files or <span class="text-secondary underline decoration-2 underline-offset-2">browse folder</span>
+</p>
+<span class="font-caption text-caption text-muted-soft">Supported: .png, .jpg, .glb, .obj, .zip (Max 50MB)</span>
+</div>
+<!-- Pre-attached sample files -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm mt-3">
+<div class="flex items-center justify-between p-2.5 bg-canvas rounded-xl shadow-sm">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-brand-pink text-[20px]">image</span>
+<div class="truncate">
+<p class="font-caption text-caption text-ink font-semibold truncate">moodboard_clay_v2.png</p>
+<span class="font-caption text-[11px] text-muted-soft">4.2 MB • Ready</span>
+</div>
+</div>
+<button class="text-muted hover:text-error transition-colors p-1" title="Remove file" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<div class="flex items-center justify-between p-2.5 bg-canvas rounded-xl shadow-sm">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-secondary text-[20px]">view_in_ar</span>
+<div class="truncate">
+<p class="font-caption text-caption text-ink font-semibold truncate">brand_palette_spec.pdf</p>
+<span class="font-caption text-[11px] text-muted-soft">1.8 MB • Ready</span>
+</div>
+</div>
+<button class="text-muted hover:text-error transition-colors p-1" title="Remove file" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Section 3: Delivery Timeline Selector -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-title-sm text-title-sm text-ink font-semibold flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-ink text-on-primary flex items-center justify-center text-[12px] font-bold">3</span>
+              Delivery Pace
+            </label>
+<p class="font-body-sm text-body-sm text-muted">All deadlines are locked into the milestone escrow agreement.</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm mt-2">
+<!-- Standard Option -->
+<label class="flex items-start gap-3 p-space-md rounded-2xl bg-canvas shadow-sm cursor-pointer hover:bg-surface-soft transition-all" id="optStandardLabel">
+<input checked="" class="mt-1 w-4 h-4 accent-ink" id="optStandard" name="deliveryOption" type="radio" value="standard"/>
+<div class="flex flex-col flex-1">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-title-sm text-ink font-semibold">Standard Turnaround</span>
+<span class="font-caption text-caption text-muted font-medium">Included</span>
+</div>
+<span class="font-caption text-caption text-muted mt-1">3 Business Days</span>
+<p class="font-body-sm text-[12px] text-muted-soft mt-1 leading-normal">First revision drafts delivered within 48h.</p>
+</div>
+</label>
+<!-- Rush Option -->
+<label class="flex items-start gap-3 p-space-md rounded-2xl bg-surface-soft shadow-sm cursor-pointer hover:bg-surface-card transition-all" id="optRushLabel">
+<input class="mt-1 w-4 h-4 accent-ink" id="optRush" name="deliveryOption" type="radio" value="rush"/>
+<div class="flex flex-col flex-1">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-title-sm text-ink font-semibold flex items-center gap-1">
+                      Rush Priority <span class="text-brand-pink text-[14px]">⚡</span>
+</span>
+<span class="font-caption text-caption text-ink font-bold">+₹5,000</span>
+</div>
+<span class="font-caption text-caption text-ink font-medium mt-1">24-Hour Guarantee</span>
+<p class="font-body-sm text-[12px] text-muted-soft mt-1 leading-normal">Dedicated queue priority + real-time Slack bridge.</p>
+</div>
+</label>
+</div>
+</div>
+<!-- Section 4: Payment Method -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-title-sm text-title-sm text-ink font-semibold flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-ink text-on-primary flex items-center justify-center text-[12px] font-bold">4</span>
+              Escrow Funding Method
+            </label>
+<p class="font-body-sm text-body-sm text-muted">Choose your preferred balance source to lock milestone funds.</p>
+<div class="grid grid-cols-1 gap-space-sm mt-2">
+<!-- Card / Stripe Option -->
+<label class="flex items-start gap-3 p-space-md rounded-2xl bg-canvas shadow-sm cursor-pointer hover:bg-surface-soft transition-all" id="payMethodCardLabel">
+<input checked="" class="mt-1 w-4 h-4 accent-ink" id="payMethodCard" name="payMethod" type="radio" value="card"/>
+<div class="flex flex-col flex-1">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-title-sm text-ink font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">credit_card</span> Card / Stripe
+                    </span>
+<span class="font-caption text-[11px] bg-surface-strong px-2 py-0.5 rounded text-ink font-semibold">Instant</span>
+</div>
+<p class="font-caption text-caption text-muted mt-1">Visa, Mastercard, Apple Pay</p>
+</div>
+</label>
+
+</div>
+</div>
+<!-- Section 5: Client Agreement Checkbox -->
+<div class="pt-space-xs flex items-start gap-3">
+<input checked="" class="mt-1 w-4 h-4 rounded accent-ink cursor-pointer" id="agreementCheck" type="checkbox"/>
+<label class="font-caption text-caption text-body cursor-pointer" for="agreementCheck">
+              I agree to the <a class="font-semibold text-ink underline" href="#">Escrow Charter</a> and acknowledge that funds will only release upon my explicit final approval of the 3D deliverables.
+            </label>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Order Summary & Trust & Safety (5 Cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-lg lg:sticky lg:top-24">
+<!-- Live Escrow Calculator Card -->
+<div class="bg-surface-card rounded-2xl p-space-lg shadow-lg relative overflow-hidden">
+<div class="flex items-center justify-between pb-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-ink text-[22px]">account_balance_wallet</span>
+<h2 class="font-title-md text-title-md text-ink font-bold">Escrow Deposit Total</h2>
+</div>
+<span class="font-caption-uppercase text-caption-uppercase text-brand-teal bg-secondary-container px-2 py-0.5 rounded-full font-bold">Milestone #1</span>
+</div>
+<!-- Breakdown list -->
+<div class="flex flex-col gap-3 py-space-md">
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="text-body">3D Character Modeling (Standard Tier)</span>
+<span class="font-semibold text-ink" id="rowSubtotal">₹26,560</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm" id="rushRow" style="display: none;">
+<span class="text-body flex items-center gap-1 text-brand-pink font-semibold">
+<span class="material-symbols-outlined text-[16px]">bolt</span> 24h Rush Delivery Surcharge
+              </span>
+<span class="font-semibold text-ink" id="rowRush">+₹5,000</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<div class="flex items-center gap-1 text-body">
+<span>SkillSwap Escrow Vault Fee (5%)</span>
+<span class="material-symbols-outlined text-[14px] text-muted-soft" title="Covers dispute protection and custodial holding">info</span>
+</div>
+<span class="font-semibold text-ink" id="rowPlatformFee">₹1,328</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="text-body">Creator Royalty &amp; State Tax</span>
+<span class="font-semibold text-success">Waived (0%)</span>
+</div>
+</div>
+<!-- Total display container -->
+<div class="mt-space-sm p-space-md bg-canvas rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-caption-uppercase text-[11px] text-muted tracking-wider font-bold">TOTAL ESCROW HOLD</span>
+<span class="font-caption text-caption text-muted-soft">Fully refundable before sign-off</span>
+</div>
+<div class="font-display-sm text-display-sm text-ink font-bold tracking-tight" id="totalDisplay">
+              ₹27,888
+            </div>
+</div>
+<!-- Primary CTA Button -->
+<div class="mt-space-md flex flex-col gap-space-xs">
+<button class="w-full h-12 bg-ink hover:bg-primary-active text-on-primary rounded-xl font-button text-button flex items-center justify-center gap-2 shadow-md transition-all active:scale-[0.99]" id="btnFundEscrow" type="button">
+<span class="material-symbols-outlined text-[20px]">lock</span>
+<span id="btnLabel">Confirm &amp; Fund Escrow (₹27,888)</span>
+</button>
+<p class="font-caption text-[11px] text-center text-muted-soft mt-1">
+              Protected by Stripe Connect • Zero liability fraud protection
+            </p>
+</div>
+<!-- Escrow Guarantee Badge Box -->
+<div class="mt-space-md p-space-md bg-surface-soft rounded-xl flex items-start gap-3">
+<div class="w-10 h-10 rounded-xl bg-brand-mint/40 text-ink flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">verified_user</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-title-sm text-title-sm text-ink font-bold">The 100% Escrow Guarantee</h3>
+<p class="font-body-sm text-[13px] text-muted leading-relaxed mt-0.5">
+                Funds are held in an isolated escrow lockbox. Mila Fontaine receives payment only after you inspect and sign off on final 3D polygon meshes and textures.
+              </p>
+</div>
+</div>
+</div>
+<!-- Creator Mini Badge & Portfolio Preview -->
+<div class="bg-surface-container-low rounded-2xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-caption-uppercase text-caption-uppercase text-muted">RECENT DELIVERABLE EXAMPLE</span>
+<div class="flex items-center gap-1 text-warning font-semibold font-caption text-caption">
+<span class="material-symbols-outlined text-[16px] text-warning" style="font-variation-settings: 'FILL' 1;">star</span>
+              4.98 (86 reviews)
+            </div>
+</div>
+<div class="relative w-full h-36 rounded-xl overflow-hidden shadow-inner bg-surface-strong">
+<img class="w-full h-full object-cover" data-alt="A whimsical claymation 3D stylized character rendered in pastel studio lighting, featuring soft smooth curves and tactile textures on an off-white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvTmCH82WfHNYYembdukd0WOKUnOjSTfyaXSKExnsYRlPrUYze7wjv31yaN6SNGlzVWG91P5O7YEVKuiIOVdf4KWcrueDGhTyyx4IwEx67rXd4A4AyCeLYTpNJvzBl0osc_AUkqzFgXf7mNzvdPCqvtQOiV3C-kvjDQ-VJ4I7HqvgSzZ8UBbARahcHMVPLiDCKQaf3N8InqhWdbrNCoHnH0WNl4V8Dt_h9HEAk2TOHeeXRnrASnOPu"/>
+<div class="absolute bottom-2 left-2 bg-ink/80 text-on-primary backdrop-blur-md px-2.5 py-1 rounded-full font-caption text-[11px] flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-brand-mint"></span>
+              Created in Blender • 18.4k Polys
+            </div>
+</div>
+<div class="flex items-center justify-between text-caption font-caption text-muted px-1">
+<span>Average turnaround: <strong>44 hours</strong></span>
+<span>Response rate: <strong>100%</strong></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- FLOATING SUCCESS STATE MODAL OVERLAY (Initially Hidden, Toggled by JS) -->
+<div class="fixed inset-0 z-50 bg-ink/60 backdrop-blur-sm flex items-center justify-center p-gutter transition-all duration-300 opacity-0 pointer-events-none" id="successModalOverlay">
+<div class="bg-canvas w-full max-w-xl rounded-2xl p-space-lg lg:p-space-xl shadow-2xl relative transform scale-95 transition-all duration-300 flex flex-col gap-space-lg" id="successModalContent">
+<!-- Close icon -->
+<button class="absolute top-4 right-4 text-muted hover:text-ink w-8 h-8 rounded-full bg-surface-soft hover:bg-surface-card flex items-center justify-center transition-colors" id="btnCloseModal" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<!-- Celebration Header -->
+<div class="flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-2xl bg-brand-mint/30 flex items-center justify-center mb-space-sm shadow-sm">
+<span class="text-3xl">🎉</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 bg-surface-strong rounded-full text-caption font-caption text-ink font-semibold mb-2">
+<span class="w-2 h-2 rounded-full bg-success"></span> Escrow Vault Funded (#ORD-9821)
+        </div>
+<h2 class="font-display-sm text-display-sm text-ink font-bold tracking-tight">Booking Confirmed &amp; Milestone Created!</h2>
+<p class="font-body-sm text-body-sm text-muted mt-1 max-w-md">
+          Mila Fontaine has been notified and granted access to your project brief. ₹27,888 is locked securely in milestone escrow.
+        </p>
+</div>
+<!-- Milestone Interactive Tracker -->
+<div class="bg-surface-card rounded-2xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-caption-uppercase text-caption-uppercase text-ink font-bold">PROJECT TIMELINE TRACKER</span>
+<span class="font-caption text-caption text-secondary font-semibold">Standard 3-Day Pace</span>
+</div>
+<div class="relative flex flex-col gap-4">
+<!-- Step 1 (Completed) -->
+<div class="flex items-start gap-3 relative">
+<div class="w-7 h-7 rounded-full bg-ink text-on-primary flex items-center justify-center shrink-0 shadow-sm z-10">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<div class="flex flex-col flex-1">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-title-sm text-ink font-semibold">Brief &amp; Specs Received</span>
+<span class="font-caption text-[11px] text-success font-semibold">Just Now</span>
+</div>
+<p class="font-body-sm text-[12px] text-muted">2 reference assets ingested and cached in Creator Vault.</p>
+</div>
+</div>
+<!-- Step 2 (In Progress) -->
+<div class="flex items-start gap-3 relative">
+<div class="w-7 h-7 rounded-full bg-brand-ochre text-ink flex items-center justify-center shrink-0 shadow-sm z-10 animate-bounce">
+<span class="material-symbols-outlined text-[16px]">draw</span>
+</div>
+<div class="flex flex-col flex-1">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-title-sm text-ink font-semibold">Draft Clay Concepts</span>
+<span class="font-caption text-[11px] bg-brand-ochre/30 px-2 py-0.5 rounded text-ink font-semibold">Est. Tomorrow</span>
+</div>
+<p class="font-body-sm text-[12px] text-muted">Low-poly silhouette passes and rough expression sketches.</p>
+</div>
+</div>
+<!-- Step 3 (Pending) -->
+<div class="flex items-start gap-3 relative">
+<div class="w-7 h-7 rounded-full bg-surface-strong text-muted flex items-center justify-center shrink-0 z-10">
+<span class="material-symbols-outlined text-[16px]">inventory_2</span>
+</div>
+<div class="flex flex-col flex-1">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-title-sm text-muted font-semibold">Final Deliverable &amp; Payout Sign-off</span>
+<span class="font-caption text-[11px] text-muted-soft">3 Days</span>
+</div>
+<p class="font-body-sm text-[12px] text-muted-soft">Mesh inspection, texture baking, and escrow release.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Action Buttons -->
+<div class="flex flex-col sm:flex-row items-center gap-space-sm pt-1">
+<button class="w-full sm:flex-1 h-12 bg-ink hover:bg-primary-active text-on-primary rounded-xl font-button text-button flex items-center justify-center gap-2 shadow-sm transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span>Open Creator Chat 💬</span>
+</button>
+<button class="w-full sm:flex-1 h-12 bg-surface-strong hover:bg-surface-card text-ink rounded-xl font-button text-button flex items-center justify-center gap-2 shadow-sm transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">list_alt</span>
+<span>View in My Bookings</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Interactive Logic for Pricing, Rush Delivery, and Escrow Modal -->
+<script>
+    (function() {
+      const baseSubtotal = 26560;   // Standard tier price in INR (was $320)
+      const rushFeeAmount = 5000;   // Rush surcharge in INR (was $60)
+      let isRush = false;
+      let paymentType = 'card';
+      const inr = (n) => '₹' + new Intl.NumberFormat('en-IN').format(n);
+
+      const optStandard = document.getElementById('optStandard');
+      const optRush = document.getElementById('optRush');
+      const optStandardLabel = document.getElementById('optStandardLabel');
+      const optRushLabel = document.getElementById('optRushLabel');
+
+      const payMethodCard = document.getElementById('payMethodCard');
+      const payMethodCardLabel = document.getElementById('payMethodCardLabel');
+      const rushRow = document.getElementById('rushRow');
+      const rowPlatformFee = document.getElementById('rowPlatformFee');
+      const totalDisplay = document.getElementById('totalDisplay');
+      const btnLabel = document.getElementById('btnLabel');
+      const btnFundEscrow = document.getElementById('btnFundEscrow');
+      const heroPriceDisplay = document.getElementById('heroPriceDisplay');
+
+      const successModalOverlay = document.getElementById('successModalOverlay');
+      const successModalContent = document.getElementById('successModalContent');
+      const btnCloseModal = document.getElementById('btnCloseModal');
+
+      function recalculate() {
+        const rushFee = isRush ? rushFeeAmount : 0;
+        const subtotal = baseSubtotal + rushFee;
+        const platformFee = Math.round(subtotal * 0.05);
+        const total = subtotal + platformFee;
+
+        if (isRush) {
+          rushRow.style.display = 'flex';
+          optRushLabel.classList.remove('bg-surface-soft');
+          optRushLabel.classList.add('bg-brand-pink/15');
+          optStandardLabel.classList.remove('bg-surface-soft');
+          optStandardLabel.classList.add('bg-canvas');
+        } else {
+          rushRow.style.display = 'none';
+          optRushLabel.classList.remove('bg-brand-pink/15');
+          optRushLabel.classList.add('bg-surface-soft');
+          optStandardLabel.classList.add('bg-canvas');
+        }
+
+        rowPlatformFee.textContent = inr(platformFee);
+        totalDisplay.textContent = inr(total);
+        heroPriceDisplay.textContent = inr(subtotal);
+
+        btnLabel.textContent = 'Confirm & Fund Escrow (' + inr(total) + ')';
+      }
+
+      optStandard.addEventListener('change', function() {
+        if (this.checked) {
+          isRush = false;
+          recalculate();
+        }
+      });
+
+      optRush.addEventListener('change', function() {
+        if (this.checked) {
+          isRush = true;
+          recalculate();
+        }
+      });
+
+      payMethodCard.addEventListener('change', function() {
+        if (this.checked) {
+          paymentType = 'card';
+          payMethodCardLabel.classList.add('bg-canvas');
+          
+          
+          recalculate();
+        }
+      });
+
+      // Open Modal
+      btnFundEscrow.addEventListener('click', function() {
+        successModalOverlay.classList.remove('opacity-0', 'pointer-events-none');
+        successModalOverlay.classList.add('opacity-100');
+        successModalContent.classList.remove('scale-95');
+        successModalContent.classList.add('scale-100');
+      });
+
+      // Close Modal
+      function closeModal() {
+        successModalOverlay.classList.remove('opacity-100');
+        successModalOverlay.classList.add('opacity-0', 'pointer-events-none');
+        successModalContent.classList.remove('scale-100');
+        successModalContent.classList.add('scale-95');
+      }
+
+      btnCloseModal.addEventListener('click', closeModal);
+
+      successModalOverlay.addEventListener('click', function(e) {
+        if (e.target === successModalOverlay) {
+          closeModal();
+        }
+      });
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-card mt-auto relative"><div class="h-1.5 w-full bg-gradient-to-r from-brand-pink via-brand-ochre to-brand-mint"></div><div class="max-w-7xl mx-auto px-gutter pt-margin pb-space-xl"><div class="grid grid-cols-1 md:grid-cols-12 gap-space-xl pb-space-xl"><div class="md:col-span-5 flex flex-col items-start gap-space-md"><div class="flex items-center gap-space-sm"><img alt="SkillSwap Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VtuUSGDnKXm_MHWk_C8t2G6IMHwA4vTDoUnMEjlQOR_uQaHaJDmQWtb5EXqqc5_mydbLjxJmXXgaIeXqZiaRW5RdvkRI8wna9nGS1sLrJl3OovsXsLsdWAL0vriGttOPde3VXlLkjn5TnmYIgCmjf6F0uRWYUwbKdjV7l3cQLCVCQZzYY8zGgayfoy4baFt6tfuyQseSrM5dV79KvnkMNBozVFxw37b9fh_VA63zzg28e9Qs8bDzG0FQ"/><span class="font-display-sm text-title-md text-ink font-bold tracking-tight">SkillSwap</span></div><p class="font-body-md text-body-md text-muted max-w-sm">The marketplace where young talent ships work and gets paid.</p><div class="inline-flex items-center gap-space-xs px-space-md py-1 bg-surface-strong rounded-full text-caption text-ink font-semibold"><span class="w-2 h-2 rounded-full bg-success animate-pulse"></span>14,800+ Active Projects Today</div></div><div class="md:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-space-lg"><div class="flex flex-col gap-space-sm"><span class="font-caption-uppercase text-caption-uppercase text-on-surface-variant">Categories</span><div class="flex flex-col gap-2"><a class="font-body-sm text-body-sm text-muted hover:text-ink transition-colors" data-path="marketplace" href="index.html">Design &amp; 3D Clay</a><a class="font-body-sm text-body-sm text-muted hover:text-ink transition-colors" data-path="marketplace" href="index.html">Creative Direction</a><a class="font-body-sm text-body-sm text-muted hover:text-ink transition-colors" data-path="marketplace" href="index.html">Motion &amp; VFX</a><a class="font-body-sm text-body-sm text-muted hover:text-ink transition-colors" data-path="marketplace" href="index.html">Prompt Engineering</a></div></div><div class="flex flex-col gap-space-sm"><span class="font-caption-uppercase text-caption-uppercase text-on-surface-variant">Marketplace</span><div class="flex flex-col gap-2"><a class="font-body-sm text-body-sm text-muted hover:text-ink transition-colors" data-path="marketplace" href="index.html">Explore Gigs</a><a class="font-body-sm text-body-sm text-muted hover:text-ink transition-colors" data-path="post-a-gig" href="post-gig.html">Post New Service</a><a class="font-body-sm text-body-sm text-muted hover:text-ink transition-colors" data-path="creator-dashboard" href="dashboard.html">Creator Hub</a><a class="font-body-sm text-body-sm text-muted hover:text-ink transition-colors" data-path="my-bookings" href="bookings.html">Trust & Safety</a></div></div><div class="flex flex-col gap-space-sm"><span class="font-caption-uppercase text-caption-uppercase text-on-surface-variant">Platform</span><div class="flex flex-col gap-2"><a class="font-body-sm text-body-sm text-muted hover:text-ink transition-colors" href="#">Community Guidelines</a><a class="font-body-sm text-body-sm text-muted hover:text-ink transition-colors" href="#">Clay Design Guild</a><a class="font-body-sm text-body-sm text-muted hover:text-ink transition-colors" href="#">Privacy &amp; Terms</a><a class="font-body-sm text-body-sm text-muted hover:text-ink transition-colors" href="#">Security Vault</a></div></div></div></div><div class="pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md text-caption text-muted-soft"><p>© 2025 SkillSwap Network Inc. Handcrafted for next-gen builders.</p><div class="flex items-center gap-space-md"><span class="inline-flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-brand-ochre"></span>All Systems Operational</span><span>UTC 14:32</span></div></div></div></footer><script src="api-client.js"></script><script src="app.js"></script><script src="hydrate.js"></script></body></html>

@@ -1,0 +1,33 @@
+# Render blueprint. Deploy via https://render.com/docs/blueprint-spec.
+# One free web service + a shared Neon/Render Postgres URL supplied via env.
+services:
+  - type: web
+    name: skillswap-backend
+    runtime: node
+    plan: free
+    rootDir: backend
+    buildCommand: npm install && npm run build
+    startCommand: npm run start:prod
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 4000
+      - key: DATABASE_URL
+        sync: false            # paste in Render dashboard; do NOT commit
+      - key: CORS_ORIGIN
+        sync: false            # e.g. https://skillswap-frontend.onrender.com
+      - key: PLATFORM_FEE_PERCENT
+        value: "5"
+      - key: RUSH_SURCHARGE_PAISE
+        value: "500000"
+      - key: TRENDING_CRON
+        value: "*/5 * * * *"
+      - key: UPLOAD_DIR
+        value: /var/data/uploads   # requires a disk mount for persistence
+    disk:
+      name: uploads
+      mountPath: /var/data
+      sizeGB: 1
+    healthCheckPath: /health
+    autoDeploy: true

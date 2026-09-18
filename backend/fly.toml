@@ -1,0 +1,32 @@
+# Fly.io config. Requires `fly launch --no-deploy` first to bind an app name.
+app = "skillswap-backend"
+primary_region = "bom"        # ap-south-1 equivalent; change per your region
+kill_signal = "SIGTERM"
+kill_timeout = 10
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  NODE_ENV = "production"
+  PORT = "4000"
+
+[http_service]
+  internal_port = 4000
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+
+  [http_service.checks]
+    interval = "30s"
+    timeout = "5s"
+    grace_period = "10s"
+    method = "GET"
+    path = "/health"
+
+# Attach a Fly volume for uploads (survives redeploys).
+# Provision with: fly volumes create ss_uploads --size 1
+[[mounts]]
+  source = "ss_uploads"
+  destination = "/data"

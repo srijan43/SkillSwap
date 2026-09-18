@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>SkillSwap - Creator Economy Marketplace</title><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary": "#000000", "tertiary-fixed": "#ffd9e0", "tertiary-container": "#3f0019", "surface": "#fef9ef", "on-background": "#1d1c16", "hairline-soft": "#f0f0f0", "on-secondary": "#ffffff", "on-dark-soft": "#a0a0a0", "primary-fixed": "#e5e2e1", "primary-fixed-dim": "#c9c6c5", "on-error": "#ffffff", "success": "#22c55e", "secondary-container": "#c4e6e6", "on-primary-container": "#858383", "error": "#ef4444", "on-surface-variant": "#444748", "on-tertiary-fixed": "#3f0019", "primary-disabled": "#e5e5e5", "surface-dim": "#dedad0", "tertiary": "#000000", "on-secondary-fixed": "#002020", "surface-soft": "#faf5e8", "inverse-surface": "#32302a", "primary-container": "#1c1b1b", "brand-mint": "#a4d4c5", "surface-bright": "#fef9ef", "on-tertiary-container": "#ed3e7e", "surface-tint": "#5f5e5e", "muted": "#6a6a6a", "hairline": "#e5e5e5", "canvas": "#fffaf0", "inverse-primary": "#c9c6c5", "surface-container-low": "#f8f3e9", "surface-container-highest": "#e7e2d8", "on-primary": "#ffffff", "surface-card": "#f5f0e0", "body": "#3a3a3a", "background": "#fef9ef", "surface-container": "#f2ede4", "on-dark": "#ffffff", "on-tertiary-fixed-variant": "#8f0042", "secondary-fixed": "#c7e9e8", "surface-strong": "#ebe6d6", "inverse-on-surface": "#f5f0e6", "on-error-container": "#93000a", "error-container": "#ffdad6", "muted-soft": "#9a9a9a", "primary-active": "#1f1f1f", "on-surface": "#1d1c16", "ink": "#0a0a0a", "brand-peach": "#ffb084", "brand-ochre": "#e8b94a", "on-secondary-fixed-variant": "#2d4c4c", "surface-container-lowest": "#ffffff", "secondary": "#446464", "secondary-fixed-dim": "#abcdcc", "body-strong": "#1a1a1a", "on-primary-fixed-variant": "#474646", "outline-variant": "#c4c7c7", "on-tertiary": "#ffffff", "brand-pink": "#ff4d8b", "tertiary-fixed-dim": "#ffb1c3", "warning": "#f59e0b", "surface-variant": "#e7e2d8", "surface-container-high": "#ece8de", "brand-lavender": "#b8a4ed", "on-primary-fixed": "#1c1b1b", "surface-dark": "#0a1a1a", "outline": "#747878", "brand-teal": "#1a3a3a", "surface-dark-elevated": "#1a2a2a", "on-secondary-container": "#496868", "brand-coral": "ff6b5a" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "margin-sm": "1.25rem", "space-md": "1rem", "space-xs": "0.25rem", "space-xl": "2rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "margin": "3rem", "gutter-sm": "1rem", "gutter": "1.5rem" }, fontFamily: { "caption-uppercase": ["Inter"], "display-sm": ["Plus Jakarta Sans"], "display-xl-mobile": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "body-sm": ["Inter"], "display-md": ["Plus Jakarta Sans"], "display-lg-mobile": ["Plus Jakarta Sans"], "caption": ["Inter"], "display-xl": ["Plus Jakarta Sans"], "button": ["Inter"], "title-sm": ["Inter"], "nav-link": ["Inter"], "title-md": ["Inter"], "title-lg": ["Inter"], "display-md-mobile": ["Plus Jakarta Sans"], "body-md": ["Inter"] }, fontSize: { "caption-uppercase": ["12px", { lineHeight: "1.4", letterSpacing: "1.5px", fontWeight: "600" }], "display-sm": ["32px", { lineHeight: "1.15", letterSpacing: "-0.5px", fontWeight: "600" }], "display-xl-mobile": ["44px", { lineHeight: "1.05", letterSpacing: "-1.5px", fontWeight: "600" }], "display-lg": ["56px", { lineHeight: "1.05", letterSpacing: "-2px", fontWeight: "600" }], "body-sm": ["14px", { lineHeight: "1.55", letterSpacing: "0px", fontWeight: "400" }], "display-md": ["40px", { lineHeight: "1.1", letterSpacing: "-1px", fontWeight: "600" }], "display-lg-mobile": ["36px", { lineHeight: "1.1", letterSpacing: "-1px", fontWeight: "600" }], "caption": ["13px", { lineHeight: "1.4", letterSpacing: "0px", fontWeight: "500" }], "display-xl": ["72px", { lineHeight: "1", letterSpacing: "-2.5px", fontWeight: "600" }], "button": ["14px", { lineHeight: "1", letterSpacing: "0px", fontWeight: "600" }], "title-sm": ["16px", { lineHeight: "1.4", letterSpacing: "0px", fontWeight: "600" }], "nav-link": ["14px", { lineHeight: "1.4", letterSpacing: "0px", fontWeight: "500" }], "title-md": ["18px", { lineHeight: "1.4", letterSpacing: "0px", fontWeight: "600" }], "title-lg": ["24px", { lineHeight: "1.3", letterSpacing: "-0.3px", fontWeight: "600" }], "display-md-mobile": ["30px", { lineHeight: "1.15", letterSpacing: "-0.5px", fontWeight: "600" }], "body-md": ["16px", { lineHeight: "1.55", letterSpacing: "0px", fontWeight: "400" }] } } } };</script></head><body class="bg-canvas font-body-md text-body min-h-screen flex flex-col selection:bg-brand-mint selection:text-ink"><header class="fixed top-0 left-0 w-full z-50 bg-canvas/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 max-w-7xl mx-auto px-gutter flex items-center justify-center gap-space-md xl:gap-space-lg"><a aria-current="page" class="hidden xl:inline-flex items-center px-space-md py-1.5 transition-all duration-150 bg-surface-strong text-ink font-semibold rounded-full" data-path="marketplace" href="index.html">Explore Marketplace</a><a class="hidden xl:inline-flex items-center px-space-md py-1.5 font-nav-link text-nav-link text-on-surface-variant hover:text-ink hover:bg-surface-card rounded-full transition-all duration-150" data-path="post-a-gig" href="post-gig.html">Post a Gig</a><a class="flex items-center gap-space-sm group" data-path="marketplace" href="index.html"><img alt="SkillSwap Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VtuUSGDnKXm_MHWk_C8t2G6IMHwA4vTDoUnMEjlQOR_uQaHaJDmQWtb5EXqqc5_mydbLjxJmXXgaIeXqZiaRW5RdvkRI8wna9nGS1sLrJl3OovsXsLsdWAL0vriGttOPde3VXlLkjn5TnmYIgCmjf6F0uRWYUwbKdjV7l3cQLCVCQZzYY8zGgayfoy4baFt6tfuyQseSrM5dV79KvnkMNBozVFxw37b9fh_VA63zzg28e9Qs8bDzG0FQ"/><span class="font-display-sm text-title-md text-ink tracking-tight font-bold">SkillSwap</span></a><a class="hidden xl:inline-flex items-center px-space-md py-1.5 font-nav-link text-nav-link text-on-surface-variant hover:text-ink hover:bg-surface-card rounded-full transition-all duration-150" data-path="creator-dashboard" href="dashboard.html">Creator Dashboard</a><a class="hidden xl:inline-flex items-center px-space-md py-1.5 font-nav-link text-nav-link text-on-surface-variant hover:text-ink hover:bg-surface-card rounded-full transition-all duration-150" data-path="my-bookings" href="bookings.html">My Bookings</a></div></header><main class="w-full pt-16 bg-canvas flex-1"><div class="flex flex-col w-full">
+<!-- Hero Section with Tactile Warmth & Search Canvas -->
+<section class="relative w-full overflow-hidden bg-surface-container-low px-gutter py-space-xl lg:py-margin">
+<!-- Ambient Clay Blobs / Studio Atmosphere -->
+<div class="absolute -top-16 -right-16 w-96 h-96 rounded-full bg-brand-pink/10 blur-3xl pointer-events-none"></div>
+<div class="absolute top-1/2 -left-20 w-80 h-80 rounded-full bg-brand-ochre/15 blur-3xl pointer-events-none"></div>
+<div class="absolute bottom-0 right-1/4 w-72 h-72 rounded-full bg-brand-mint/20 blur-3xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto flex flex-col items-center text-center relative z-10">
+<!-- Status Badge -->
+<div class="inline-flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-surface-soft shadow-sm mb-space-lg">
+<span class="flex h-2.5 w-2.5 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-pink opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-brand-pink"></span>
+</span>
+<span class="font-caption-uppercase text-caption-uppercase text-ink font-semibold tracking-wider">CREATOR MARKETPLACE</span>
+<span class="text-muted text-xs">/</span>
+<span class="font-caption text-caption text-secondary font-medium">2,400+ Projects Delivered This Week</span>
+</div>
+<!-- Headline -->
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-ink max-w-4xl tracking-tight mb-space-md">
+        Monetize your craft.<br class="hidden sm:inline"/>
+<span class="text-ink">Ship work with top </span>
+<span class="inline-block relative">
+<span class="relative z-10 px-3 py-0.5 rounded-xl bg-brand-ochre text-ink">young creators.</span>
+</span>
+</h1>
+<p class="font-body-md text-body-md text-muted max-w-2xl mb-space-xl">
+        The marketplace for Gen-Z specialists in 3D, motion, and frontend engineering.
+      </p>
+<!-- Prominent Command Search Bar -->
+<div class="w-full max-w-3xl mb-space-lg">
+<div class="relative flex items-center bg-surface-container-lowest rounded-full shadow-xl p-2 transition-all duration-200 focus-within:shadow-2xl">
+<div class="flex items-center pl-space-md text-ink">
+<span class="material-symbols-outlined text-[26px]">search</span>
+</div>
+<input class="w-full px-space-md py-3.5 bg-transparent font-body-md text-body-md text-ink placeholder:text-muted-soft focus:outline-none" id="hero-search-input" placeholder="Search gigs, skills, 3D clay, motion, prompt engineering..." type="text"/>
+<div class="hidden sm:flex items-center gap-space-xs pr-2">
+<button class="flex items-center justify-center h-11 px-space-lg rounded-full bg-ink text-on-primary font-button text-button hover:bg-primary-active transition-colors shadow-md">
+              Find Talent
+            </button>
+</div>
+</div>
+</div>
+<!-- Quick Filter Pills -->
+<div class="flex flex-wrap items-center justify-center gap-space-xs max-w-3xl">
+<span class="font-caption-uppercase text-caption-uppercase text-muted mr-1">Trending:</span>
+<button class="px-space-md py-1 rounded-full bg-surface-soft hover:bg-surface-strong text-ink font-caption text-caption transition-colors">UI/UX Design</button>
+<button class="px-space-md py-1 rounded-full bg-surface-soft hover:bg-surface-strong text-ink font-caption text-caption transition-colors">Short-form Video</button>
+<button class="px-space-md py-1 rounded-full bg-surface-soft hover:bg-surface-strong text-ink font-caption text-caption transition-colors">Brand Identity</button>
+<button class="px-space-md py-1 rounded-full bg-surface-soft hover:bg-surface-strong text-ink font-caption text-caption transition-colors">AI Automation</button>
+</div>
+</div>
+</section>
+<!-- High-Voltage 6-Color Palette Categories Strip -->
+<section class="max-w-7xl mx-auto w-full px-gutter py-space-xl">
+<div class="flex items-center justify-between mb-space-lg">
+<div>
+<span class="font-caption-uppercase text-caption-uppercase text-secondary font-bold tracking-wider">BROWSE DOMAINS</span>
+<h2 class="font-display-sm text-display-sm text-ink mt-1">Specialist Hubs</h2>
+</div>
+
+</div>
+<!-- 6 saturated cards corresponding to brand palette -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-space-md">
+<!-- 1. Brand Pink -->
+<a class="group relative flex flex-col justify-between p-space-lg rounded-2xl bg-brand-pink text-on-primary shadow-md hover:shadow-xl transition-all duration-200 transform hover:-translate-y-1" href="index.html">
+<div class="w-10 h-10 rounded-xl bg-ink/20 flex items-center justify-center mb-space-xl">
+<span class="material-symbols-outlined text-white text-[22px]">auto_awesome</span>
+</div>
+<div>
+<span class="font-caption text-caption text-white/80 font-medium">340+ Gigs</span>
+<h3 class="font-title-md text-title-md text-white mt-0.5 group-hover:translate-x-0.5 transition-transform">3D Clay &amp; Toys</h3>
+</div>
+</a>
+<!-- 2. Brand Teal -->
+<a class="group relative flex flex-col justify-between p-space-lg rounded-2xl bg-brand-teal text-white shadow-md hover:shadow-xl transition-all duration-200 transform hover:-translate-y-1" href="index.html">
+<div class="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center mb-space-xl">
+<span class="material-symbols-outlined text-white text-[22px]">brush</span>
+</div>
+<div>
+<span class="font-caption text-caption text-white/80 font-medium">420+ Gigs</span>
+<h3 class="font-title-md text-title-md text-white mt-0.5 group-hover:translate-x-0.5 transition-transform">Visual Identity</h3>
+</div>
+</a>
+<!-- 3. Brand Lavender -->
+<a class="group relative flex flex-col justify-between p-space-lg rounded-2xl bg-brand-lavender text-ink shadow-md hover:shadow-xl transition-all duration-200 transform hover:-translate-y-1" href="index.html">
+<div class="w-10 h-10 rounded-xl bg-ink/10 flex items-center justify-center mb-space-xl">
+<span class="material-symbols-outlined text-ink text-[22px]">play_shapes</span>
+</div>
+<div>
+<span class="font-caption text-caption text-ink/75 font-medium">290+ Gigs</span>
+<h3 class="font-title-md text-title-md text-ink mt-0.5 group-hover:translate-x-0.5 transition-transform">Motion &amp; VFX</h3>
+</div>
+</a>
+<!-- 4. Brand Peach -->
+<a class="group relative flex flex-col justify-between p-space-lg rounded-2xl bg-brand-peach text-ink shadow-md hover:shadow-xl transition-all duration-200 transform hover:-translate-y-1" href="index.html">
+<div class="w-10 h-10 rounded-xl bg-ink/10 flex items-center justify-center mb-space-xl">
+<span class="material-symbols-outlined text-ink text-[22px]">smart_display</span>
+</div>
+<div>
+<span class="font-caption text-caption text-ink/75 font-medium">510+ Gigs</span>
+<h3 class="font-title-md text-title-md text-ink mt-0.5 group-hover:translate-x-0.5 transition-transform">Viral Formats</h3>
+</div>
+</a>
+<!-- 5. Brand Ochre -->
+<a class="group relative flex flex-col justify-between p-space-lg rounded-2xl bg-brand-ochre text-ink shadow-md hover:shadow-xl transition-all duration-200 transform hover:-translate-y-1" href="index.html">
+<div class="w-10 h-10 rounded-xl bg-ink/10 flex items-center justify-center mb-space-xl">
+<span class="material-symbols-outlined text-ink text-[22px]">terminal</span>
+</div>
+<div>
+<span class="font-caption text-caption text-ink/75 font-medium">180+ Gigs</span>
+<h3 class="font-title-md text-title-md text-ink mt-0.5 group-hover:translate-x-0.5 transition-transform">Frontend &amp; App</h3>
+</div>
+</a>
+<!-- 6. Brand Mint -->
+<a class="group relative flex flex-col justify-between p-space-lg rounded-2xl bg-brand-mint text-ink shadow-md hover:shadow-xl transition-all duration-200 transform hover:-translate-y-1" href="index.html">
+<div class="w-10 h-10 rounded-xl bg-ink/10 flex items-center justify-center mb-space-xl">
+<span class="material-symbols-outlined text-ink text-[22px]">psychology</span>
+</div>
+<div>
+<span class="font-caption text-caption text-ink/75 font-medium">215+ Gigs</span>
+<h3 class="font-title-md text-title-md text-ink mt-0.5 group-hover:translate-x-0.5 transition-transform">AI Workflows</h3>
+</div>
+</a>
+</div>
+</section>
+<!-- Featured Creators Bento Section -->
+<section class="w-full bg-surface-soft py-space-xl">
+<div class="max-w-7xl mx-auto px-gutter">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg">
+<div>
+<span class="font-caption-uppercase text-caption-uppercase text-brand-pink font-bold">VERIFIED GEN-Z BUILDERS</span>
+<h2 class="font-display-sm text-display-sm text-ink mt-1">Standout Verified Creators</h2>
+<p class="font-body-sm text-body-sm text-muted mt-1">High-reputation makers accepting new bookings this week.</p>
+</div>
+<a class="mt-4 md:mt-0 inline-flex items-center gap-space-xs font-button text-button text-ink hover:text-muted transition-colors" href="#">
+          View All 1,840+ Creators
+          <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+<!-- Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-lg">
+<!-- Lead Creator Hero Card (7 cols) -->
+<div class="md:col-span-7 bg-surface-container-lowest rounded-2xl p-space-xl shadow-md flex flex-col justify-between relative overflow-hidden">
+<div class="absolute top-0 right-0 w-44 h-44 bg-brand-peach/20 rounded-full blur-2xl pointer-events-none"></div>
+<div>
+<div class="flex items-start justify-between gap-space-md mb-space-lg">
+<div class="flex items-center gap-space-md">
+<div class="relative">
+<img class="w-16 h-16 rounded-full object-cover shadow-sm" data-alt="Portrait photo of a young female creative director with vibrant pastel dyed hair in a tactile modern studio, wearing sculptural jewelry and smiling with warm natural studio light, cinematic editorial tone" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgAbgU5pHWEGBvbMP610na2Vi2JFpsS9APmFx5-o7XFIqfklOyxjO9aNqEE5CFWmwgZkekEVufCTfYmlu8wBj1260rDuY3nVTaj9pGJ-sO3bHCQ5xrXSckFseV80NOu-gKA24Ddo_kqOJsgQYw-FOFP0DH7dhZy3uuMP_kaCZjsjB2MA3RB6YAkEnTQZGilnfbrScXlgHsRZ2zYL5vGpjvwWUdPSaLEbYv96AD-fmet1YcbLUNo6rt"/>
+<span class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-success flex items-center justify-center text-white" title="Verified Creator">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h3 class="font-title-lg text-title-lg text-ink font-bold">Mila Fontaine</h3>
+<span class="px-2 py-0.5 rounded-full bg-brand-pink/20 text-brand-pink font-caption text-caption font-bold">Top Rated 4.98</span>
+</div>
+<p class="font-body-sm text-body-sm text-muted">Creative Director &amp; 3D Clay Toy Designer • Berlin</p>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="font-caption text-caption text-muted">Starting Rate</span>
+<p class="font-title-md text-title-md text-ink font-bold">₹7,470<span class="font-body-sm text-body-sm text-muted">/hr</span></p>
+<span class="font-caption text-caption text-success font-medium">Available</span>
+</div>
+</div>
+<!-- Portfolio Visual Mosaic -->
+<div class="grid grid-cols-3 gap-space-sm mb-space-lg">
+<div class="rounded-xl overflow-hidden h-36 bg-surface-container relative group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Whimsical tactile 3D clay character design of a cute chubby monster wearing sneakers in pastel mint and peach colors, smooth porcelain finish with soft studio shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJ6D3gNvLbYtakQNdBMJZJ6uUsTifZ3opnAoFQhbLNv3upPq_hIszd4862B3cWwfwlrJHesupCMY9lySpmq95dKXnkevxEmN9qpcmYuzpznDYV4DQTg3C6u46adDu6MmuPTV3Vj18VZczuPby0YsReRysOApcd_jaLiSsHQR6LN2XIQW-IsKY6Mz1VTsuS8TJ6S32LLzVk10aoonotJd4DnkgwGnR-t3VrAtC4sSbzKDlvL3LMdLNp"/>
+<span class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-ink/75 backdrop-blur-sm text-white font-caption text-[11px]">Clay Render</span>
+</div>
+<div class="rounded-xl overflow-hidden h-36 bg-surface-container relative group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Tactile brand identity mockup featuring physical clay textured packaging, soft lilac cardboard stationery, and embossed typography for a next-gen beverage brand" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjF88NRNWYY6ekLXl7x7l3bH2pe9pM_JRTfkHED80t_vsFil6kil22cHzyNn2RyoisktHCa1a9U8zlBVudLey5Atk4f7BNXBDG0ijfhewy2obtMY0zjZKN6nDVk-ZKPAD-ck1byGtyXqNeBzm6a4VPHvOYr7IpJ9Mq1gPrp5adB6quAGeHdqeX1yYjIHVzLVXXEAkgJi7AuZ3na0fUKrmGOBf2u8ytifTh-p22c6cbviAa3L-cpL-2"/>
+<span class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-ink/75 backdrop-blur-sm text-white font-caption text-[11px]">Brand Packaging</span>
+</div>
+<div class="rounded-xl overflow-hidden h-36 bg-surface-container relative group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Playful tactile icon set rendered as miniature plasticine objects in warm lighting, showing a camera, heart, rocket, and coffee cup on soft sand background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOhNht94XawvaPX1P033M0J0HHmwcHj4aE8hwybyPAAjnnWVCWn7xm4lPPg3c3ta1gIU3un-oWJ-X5fGsc8SPJaXyRGJzy6hHhlLxKCf9YBV0YrslkSj1N8lQEokK-fdiILipTLo0w-AXy_TyOdk_8fWYQhmVXdnTdeFmZp1qu9vkF0EW6bQ3zGbOdrrAtKdJsJRHS9CDeJAcyA-kSe1wA_v9_UMgQiPw4x09kB0-ybD-r6Sk3RKFT"/>
+<span class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-ink/75 backdrop-blur-sm text-white font-caption text-[11px]">Clay Icons</span>
+</div>
+</div>
+<!-- Skills Bar -->
+<div class="flex flex-wrap items-center gap-space-xs mb-space-lg">
+<span class="font-caption text-caption text-muted">Specialties:</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-card text-ink font-caption text-caption font-medium">Blender Claymation</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-card text-ink font-caption text-caption font-medium">Packaging Design</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-card text-ink font-caption text-caption font-medium">Art Direction</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-md bg-surface-soft/60 -mx-space-xl -mb-space-xl px-space-xl pb-space-md">
+<div class="flex items-center gap-space-sm text-caption text-muted">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-brand-ochre">star</span> 4.98 (84 reviews)</span>
+<span>•</span>
+<span>100% On-time</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-2 rounded-full bg-surface-container-lowest text-ink font-button text-button hover:bg-surface-strong transition-colors shadow-sm">
+                Contact
+              </button>
+<button class="px-space-md py-2 rounded-full bg-ink text-on-primary font-button text-button hover:bg-primary-active transition-colors shadow-md">
+                Direct Hire
+              </button>
+</div>
+</div>
+</div>
+<!-- Secondary Creator Stack (5 cols) -->
+<div class="md:col-span-5 flex flex-col gap-space-lg">
+<!-- Card 2: Video Specialist -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-md flex flex-col justify-between">
+<div class="flex items-start justify-between gap-space-sm mb-space-md">
+<div class="flex items-center gap-space-sm">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="Portrait of a young male video editor in a dark studio illuminated by warm neon amber and turquoise rim lighting, headphone around neck" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAU6Ja_MLHf8Og0O4zoHtgfI9NhuvN0zylw12XYTZ8MXEozlg_3azBS5iLLQ7INUrJxL-YIAsV7SxJlz6pVR89qaJRBGmLSCtj1baCP7lVy4apq--I0xSdukk0p6zjpYFzK4ot0UTxrVNPJzMa69Z_vTPZsO4VQVWU_76vOAtn9V2NR0Js7q2VQdb-lndhzAnB01z9YNFlRlEfArRxiD_N_PFDhS6lEUoqVrRQtCiLSM7ASGxMtDenL"/>
+<div>
+<div class="flex items-center gap-1.5">
+<h3 class="font-title-sm text-title-sm text-ink font-bold">Kaito Tanaka</h3>
+<span class="px-2 py-0.5 rounded-full bg-brand-mint/30 text-ink font-caption text-[11px] font-bold">Rising Talent</span>
+</div>
+<p class="font-body-sm text-body-sm text-muted">Viral Video Pacing &amp; Premiere Pro</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-title-sm text-title-sm text-ink font-bold">₹6,225<span class="text-xs font-normal text-muted">/hr</span></p>
+<span class="font-caption text-[11px] text-muted">INR per hour</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-body mb-space-md line-clamp-2">
+              Edited for creators with 12M+ views. High-retention cuts, kinetic typography, dynamic sound design, and narrative hooks.
+            </p>
+<div class="flex items-center justify-between pt-space-sm">
+<div class="flex items-center gap-1 text-caption text-ink font-medium">
+<span class="material-symbols-outlined text-[16px] text-brand-ochre">star</span> 5.0 (42 reviews)
+              </div>
+<button class="px-space-md py-1.5 rounded-full bg-surface-card hover:bg-ink hover:text-on-primary text-ink font-button text-button transition-colors">
+                View Profile
+              </button>
+</div>
+</div>
+<!-- Card 3: AI & Fullstack Specialist -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-md flex flex-col justify-between">
+<div class="flex items-start justify-between gap-space-sm mb-space-md">
+<div class="flex items-center gap-space-sm">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="Close-up portrait of a young non-binary creative technologist in front of multiple modern monitors, warm minimal Scandinavian workspace" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0gwhMTOGhN-p0O6A3bc5ZaiFmVi-oi4z7fOPGOWl6BzKY0-zuM6OU5iMD86Yo76n6YNq52BjJ1fKSbgc4iM8aGrSFlpEJJAUTFlMlEk-lcIjp4AeTblbNkvCodBcqxyB22HK2p-Wx7FpQk7fkbjj43sx6wCOqU5pVBTc4J11z7Oj0cjV3qVxIvi71p1n7swgsOED9p-zUiFAoygYGAceKysu4rvgsDDIGUFiD2KIg0ZsrS6BmvXTK"/>
+<div>
+<div class="flex items-center gap-1.5">
+<h3 class="font-title-sm text-title-sm text-ink font-bold">Soren Lindqvist</h3>
+<span class="px-2 py-0.5 rounded-full bg-brand-lavender/40 text-ink font-caption text-[11px] font-bold">Top Seller</span>
+</div>
+<p class="font-body-sm text-body-sm text-muted">Next.js &amp; Creative Technologist</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-title-sm text-title-sm text-ink font-bold">₹9,130<span class="text-xs font-normal text-muted">/hr</span></p>
+<span class="font-caption text-[11px] text-muted">INR per hour</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-body mb-space-md line-clamp-2">
+              Bespoke micro-interactions, three.js canvas components, and Supabase backends. Ships production-ready builds in days.
+            </p>
+<div class="flex items-center justify-between pt-space-sm">
+<div class="flex items-center gap-1 text-caption text-ink font-medium">
+<span class="material-symbols-outlined text-[16px] text-brand-ochre">star</span> 4.96 (63 reviews)
+              </div>
+<button class="px-space-md py-1.5 rounded-full bg-surface-card hover:bg-ink hover:text-on-primary text-ink font-button text-button transition-colors">
+                View Profile
+              </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trending Gigs with Filter Tabs & Dynamic Cards -->
+<section class="max-w-7xl mx-auto w-full px-gutter py-space-xl">
+<!-- Header & Interactive Category Nav -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md mb-space-lg">
+<div>
+<span class="font-caption-uppercase text-caption-uppercase text-secondary font-bold">COMMUNITY LISTINGS</span>
+<h2 class="font-display-sm text-display-sm text-ink mt-1">Trending Creator Gigs</h2>
+</div>
+<!-- Tab Buttons -->
+<div class="flex items-center gap-1 p-1 rounded-full bg-surface-soft overflow-x-auto" id="gig-filter-tabs">
+<button class="filter-btn px-4 py-1.5 rounded-full bg-ink text-on-primary font-button text-button shadow-sm transition-all" data-category="all">
+          All
+        </button>
+<button class="filter-btn px-4 py-1.5 rounded-full text-muted hover:text-ink font-button text-button transition-all" data-category="design">
+          Design &amp; 3D
+        </button>
+<button class="filter-btn px-4 py-1.5 rounded-full text-muted hover:text-ink font-button text-button transition-all" data-category="video">
+          Video &amp; Animation
+        </button>
+<button class="filter-btn px-4 py-1.5 rounded-full text-muted hover:text-ink font-button text-button transition-all" data-category="dev">
+          Development
+        </button>
+<button class="filter-btn px-4 py-1.5 rounded-full text-muted hover:text-ink font-button text-button transition-all" data-category="marketing">
+          Marketing &amp; GTM
+        </button>
+</div>
+</div>
+<!-- Active Filter Chips & Sort Controls -->
+<div class="flex items-center justify-between pb-space-md mb-space-lg text-body-sm text-muted">
+<div class="flex items-center gap-space-sm">
+<span class="font-caption text-caption text-ink font-semibold">Showing 42 available gigs</span>
+<span class="w-1 h-1 rounded-full bg-muted"></span>
+<span class="text-caption text-muted">Instant Escrow Secured: <strong class="text-ink">28</strong></span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-caption text-caption text-muted">Sort by:</span>
+<select class="bg-surface-card text-ink font-caption text-caption rounded-full px-space-md py-1 focus:outline-none cursor-pointer">
+<option>Trending First</option>
+<option>Top Rated Creators</option>
+<option>Lowest Cash Price</option>
+<option>Fastest Delivery (24h)</option>
+</select>
+</div>
+</div>
+<!-- Multi-Column Gigs Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg">
+<!-- Gig Card 1: 3D Clay Characters -->
+<div class="group bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden" data-category="design">
+<div>
+<!-- Thumbnail Media -->
+<div class="relative h-48 w-full bg-surface-card overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Vibrant 3D clay animation style miniature character mascot in soft pastel colors, sitting playfully on a giant clay headphone with soft diffused studio lights" src="/images/gig_1_mascot.jpg"/>
+<div class="absolute top-3 left-3 flex gap-1.5">
+<span class="px-2 py-0.5 rounded-full bg-ink/80 backdrop-blur-md text-white font-caption text-[11px] font-medium">3D Clay</span>
+<span class="px-2 py-0.5 rounded-full bg-brand-pink text-white font-caption text-[11px] font-bold">Popular</span>
+</div>
+<button aria-label="Save to bookmarks" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-soft/80 backdrop-blur-md hover:bg-surface-container-lowest text-ink flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<!-- Content Details -->
+<div class="p-space-md">
+<!-- Creator Mini Bar -->
+<div class="flex items-center justify-between gap-space-xs mb-space-sm">
+<div class="flex items-center gap-2">
+<img class="w-6 h-6 rounded-full object-cover" data-alt="Avatar of female clay artisan wearing yellow beanie and smiling warmly in front of shelf with sculpted figurines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHEqweQtV18C8SJ1w-WplTS8UpBwv_R95IlA571BxvshmFWvcSNy7vEo8mp7B8LZfzYg7tbgDUlZufLg1KWlAK9P0DKhAj2bWTDA91iUrUJLVzXgXjynXtMB3v690x4_6L2IfgxBjikpbIiUKbH4RYzWmmBgg3dGKlnT63AwPDrw5CTYAPlyBWXkjfjJLRXs8-inx7svE7M24G6PokjwynOhaJJi3XE7O4zO9thx-KV6SpgiI5goR2"/>
+<span class="font-caption text-caption text-ink font-semibold">Talia Clay</span>
+</div>
+<div class="flex items-center gap-0.5 text-caption text-ink font-semibold">
+<span class="material-symbols-outlined text-[15px] text-brand-ochre">star</span>
+                4.99
+              </div>
+</div>
+<h3 class="font-title-sm text-title-sm text-ink font-bold group-hover:text-brand-pink transition-colors line-clamp-2 mb-space-sm">
+              3D Clay Character Modeling &amp; Rigging for Web &amp; App Mascots
+            </h3>
+<!-- Deliverable Chips -->
+<div class="flex flex-wrap gap-1.5 mb-space-md">
+<span class="px-2 py-0.5 rounded bg-surface-soft text-muted font-caption text-[11px]">24h Turnaround</span>
+<span class="px-2 py-0.5 rounded bg-surface-soft text-muted font-caption text-[11px]">3 Revisions</span>
+<span class="px-2 py-0.5 rounded bg-surface-soft text-muted font-caption text-[11px]">.GLB + Blender</span>
+</div>
+</div>
+</div>
+<!-- Price & Action Footer -->
+<div class="p-space-md pt-0">
+<div class="flex items-center justify-between pt-space-sm bg-surface-soft/50 rounded-xl p-2.5"><div><span class="font-caption text-[11px] text-muted block">Starting at</span><span class="font-title-sm text-title-sm text-ink font-bold">₹14,940</span></div><span class="font-caption text-caption text-muted">INR</span></div>
+<div class="mt-space-sm flex items-center gap-2">
+<a href="gig-details.html?slug=mila-3d-clay-character-modeling" class="inline-block w-full py-2 rounded-full bg-ink hover:bg-primary-active text-on-primary font-button text-button transition-colors text-center shadow-sm">
+              View Gig
+            </a>
+</div>
+</div>
+</div>
+<!-- Gig Card 2: Viral Short-Form Video System -->
+<div class="group bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden" data-category="video">
+<div>
+<!-- Thumbnail Media -->
+<div class="relative h-48 w-full bg-surface-card overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Vertical video editing timeline interface mockup with kinetic typography captions in bright yellow, audio waveforms, dynamic sticker overlays on a warm studio background" src="/images/gig_2_video.jpg"/>
+<div class="absolute top-3 left-3 flex gap-1.5">
+<span class="px-2 py-0.5 rounded-full bg-ink/80 backdrop-blur-md text-white font-caption text-[11px] font-medium">Video Pacing</span>
+<span class="px-2 py-0.5 rounded-full bg-brand-ochre text-ink font-caption text-[11px] font-bold">Fast Delivery</span>
+</div>
+<button aria-label="Save to bookmarks" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-soft/80 backdrop-blur-md hover:bg-surface-container-lowest text-ink flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<!-- Content Details -->
+<div class="p-space-md">
+<div class="flex items-center justify-between gap-space-xs mb-space-sm">
+<div class="flex items-center gap-2">
+<img class="w-6 h-6 rounded-full object-cover" data-alt="Young male editor with short curls in a modern brightly-lit studio room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYTvzkDHNJFl4jCxtUpqiHocy1CQBs0mYGpbQnkxKETvJ8q56zK5SWBcvznD6tnhLkodRIA4vGpJzQzODyHUV7F75kDfXIsMpgJjZHl7XlPOCWhEYyUp5Xyyzxx4CpqInA06ZZ0THby26JTMOHIqHEpMhjsECxnrLPl6tYrh4sFN9eCU62ZJuDYSp_dfaLwe2JjjUbv3lMvkcwjI5TRpDQqLUiTUXLuz0h8fGfLZ8vCjZSfQUSDfj1"/>
+<span class="font-caption text-caption text-ink font-semibold">Felix Vance</span>
+</div>
+<div class="flex items-center gap-0.5 text-caption text-ink font-semibold">
+<span class="material-symbols-outlined text-[15px] text-brand-ochre">star</span>
+                4.95
+              </div>
+</div>
+<h3 class="font-title-sm text-title-sm text-ink font-bold group-hover:text-brand-ochre transition-colors line-clamp-2 mb-space-sm">
+              Viral TikTok &amp; Reels Editing System (5 Video Pack with Hooks)
+            </h3>
+<div class="flex flex-wrap gap-1.5 mb-space-md">
+<span class="px-2 py-0.5 rounded bg-surface-soft text-muted font-caption text-[11px]">48h Batch</span>
+<span class="px-2 py-0.5 rounded bg-surface-soft text-muted font-caption text-[11px]">Sound Effects</span>
+<span class="px-2 py-0.5 rounded bg-surface-soft text-muted font-caption text-[11px]">Custom LUTs</span>
+</div>
+</div>
+</div>
+<div class="p-space-md pt-0">
+<div class="flex items-center justify-between pt-space-sm bg-surface-soft/50 rounded-xl p-2.5"><div><span class="font-caption text-[11px] text-muted block">Starting at</span><span class="font-title-sm text-title-sm text-ink font-bold">₹20,750</span></div><span class="font-caption text-caption text-muted">INR</span></div>
+<div class="mt-space-sm flex items-center gap-2">
+<a href="gig-details.html?slug=felix-viral-reels-pack" class="inline-block w-full py-2 rounded-full bg-ink hover:bg-primary-active text-on-primary font-button text-button transition-colors text-center shadow-sm">
+              View Gig
+            </a>
+</div>
+</div>
+</div>
+<!-- Gig Card 3: Figma Design System Architecture -->
+<div class="group bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden" data-category="design">
+<div>
+<!-- Thumbnail Media -->
+<div class="relative h-48 w-full bg-surface-card overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Figma token system UI layout preview with color tokens in pastel peach and teal, auto-layout badges, component hierarchy trees on soft neutral desk surface" src="/images/gig_3_figma.jpg"/>
+<div class="absolute top-3 left-3 flex gap-1.5">
+<span class="px-2 py-0.5 rounded-full bg-ink/80 backdrop-blur-md text-white font-caption text-[11px] font-medium">Design Systems</span>
+</div>
+<button aria-label="Save to bookmarks" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-soft/80 backdrop-blur-md hover:bg-surface-container-lowest text-ink flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<!-- Content Details -->
+<div class="p-space-md">
+<div class="flex items-center justify-between gap-space-xs mb-space-sm">
+<div class="flex items-center gap-2">
+<img class="w-6 h-6 rounded-full object-cover" data-alt="Female designer with round glasses smiling gently in soft morning sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAurkH57AikkVns9k2emj-OkPA8fQGTvgY4Fimc11coBoNX5H7Vx0uc-wrAGdui2qvi4XLWmD3gkMj5mpypcR1c3koLfLIUMZYsO2vDaxtzTg648VJJG7ksGf_P9dh4Qx4GVdmU5lPAzzUSBV_tbtmu1PIArJ3TAeFMTO_MkLhIso6wjVu-WqjQ6b22vHjt7ZSxJzgOteH6UM0iHloY580JL5I1g5zbvXEgPPEkWGc10qPMiU28IHz"/>
+<span class="font-caption text-caption text-ink font-semibold">Aria Thorne</span>
+</div>
+<div class="flex items-center gap-0.5 text-caption text-ink font-semibold">
+<span class="material-symbols-outlined text-[15px] text-brand-ochre">star</span>
+                5.00
+              </div>
+</div>
+<h3 class="font-title-sm text-title-sm text-ink font-bold group-hover:text-brand-mint transition-colors line-clamp-2 mb-space-sm">
+              Production Figma Design System Architecture &amp; Multi-Theme Tokens
+            </h3>
+<div class="flex flex-wrap gap-1.5 mb-space-md">
+<span class="px-2 py-0.5 rounded bg-surface-soft text-muted font-caption text-[11px]">W3C Tokens</span>
+<span class="px-2 py-0.5 rounded bg-surface-soft text-muted font-caption text-[11px]">Auto Layout v5</span>
+<span class="px-2 py-0.5 rounded bg-surface-soft text-muted font-caption text-[11px]">Dark Mode</span>
+</div>
+</div>
+</div>
+<div class="p-space-md pt-0">
+<div class="flex items-center justify-between pt-space-sm bg-surface-soft/50 rounded-xl p-2.5"><div><span class="font-caption text-[11px] text-muted block">Starting at</span><span class="font-title-sm text-title-sm text-ink font-bold">₹26,560</span></div><span class="font-caption text-caption text-muted">INR</span></div>
+<div class="mt-space-sm flex items-center gap-2">
+<a href="gig-details.html?slug=aria-figma-design-system" class="inline-block w-full py-2 rounded-full bg-ink hover:bg-primary-active text-on-primary font-button text-button transition-colors text-center shadow-sm">
+              View Gig
+            </a>
+</div>
+</div>
+</div>
+<!-- Gig Card 4: Brand Identity & Tactile 3D Assets -->
+<div class="group bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden" data-category="marketing">
+<div>
+<!-- Thumbnail Media -->
+<div class="relative h-48 w-full bg-surface-card overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Tactile brand identity mockup showing embossed letterpress business cards, a clay sculpted mascot seal, pastel ceramic mug on warm terracotta background" src="/images/gig_4_brand.jpg"/>
+<div class="absolute top-3 left-3 flex gap-1.5">
+<span class="px-2 py-0.5 rounded-full bg-ink/80 backdrop-blur-md text-white font-caption text-[11px] font-medium">Branding</span>
+<span class="px-2 py-0.5 rounded-full bg-brand-lavender text-ink font-caption text-[11px] font-bold">Escrow</span>
+</div>
+<button aria-label="Save to bookmarks" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-soft/80 backdrop-blur-md hover:bg-surface-container-lowest text-ink flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<!-- Content Details -->
+<div class="p-space-md">
+<div class="flex items-center justify-between gap-space-xs mb-space-sm">
+<div class="flex items-center gap-2">
+<img class="w-6 h-6 rounded-full object-cover" data-alt="Portrait of an energetic graphic artist in a colorful graphic sweater holding a tactile sketchbook" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6igGchZgmO5wc3Has9cWwXJM5KRmGRR1vvoQLEuXuezMuiocVBsWVSwb8iHu-EejIHqIeOoORy_uPdNLSKw6B-9zP_srJ17KjWAM_EnIQj6dGSZKfu7r4KIJRlULOBl1TuLf581GX79JJpcihl9CcsgOICs9DFVNxglH10wVyJsMsAxsWu8MoI_gk5dUQQjqTjndB_23GuQxfySFdMNfJNEJzs-ZqYzVH9xlxUGkHpJcrF6wP5B9A"/>
+<span class="font-caption text-caption text-ink font-semibold">Leon Zhang</span>
+</div>
+<div class="flex items-center gap-0.5 text-caption text-ink font-semibold">
+<span class="material-symbols-outlined text-[15px] text-brand-ochre">star</span>
+                4.97
+              </div>
+</div>
+<h3 class="font-title-sm text-title-sm text-ink font-bold group-hover:text-brand-peach transition-colors line-clamp-2 mb-space-sm">
+              Tactile Brand Identity Suite &amp; Physical-Feel 3D Asset Guidelines
+            </h3>
+<div class="flex flex-wrap gap-1.5 mb-space-md">
+<span class="px-2 py-0.5 rounded bg-surface-soft text-muted font-caption text-[11px]">Vector + 3D</span>
+<span class="px-2 py-0.5 rounded bg-surface-soft text-muted font-caption text-[11px]">Brand Book</span>
+<span class="px-2 py-0.5 rounded bg-surface-soft text-muted font-caption text-[11px]">5 Days</span>
+</div>
+</div>
+</div>
+<div class="p-space-md pt-0">
+<div class="flex items-center justify-between pt-space-sm bg-surface-soft/50 rounded-xl p-2.5"><div><span class="font-caption text-[11px] text-muted block">Starting at</span><span class="font-title-sm text-title-sm text-ink font-bold">₹37,350</span></div><span class="font-caption text-caption text-muted">INR</span></div>
+<div class="mt-space-sm flex items-center gap-2">
+<a href="gig-details.html?slug=leon-tactile-brand-identity" class="inline-block w-full py-2 rounded-full bg-ink hover:bg-primary-active text-on-primary font-button text-button transition-colors text-center shadow-sm">
+              View Gig
+            </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Load More Callout Button -->
+<div class="mt-space-xl flex flex-col items-center text-center">
+<button class="px-space-xl py-3 rounded-full bg-surface-card hover:bg-surface-strong text-ink font-button text-button shadow-sm transition-all duration-150 inline-flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+        Load 24 More Community Gigs
+      </button>
+<span class="font-caption text-caption text-muted mt-2">Showing 4 of 340+ active marketplace offerings</span>
+</div>
+</section>
+<!-- Interactive Search / Filter Behavior script -->
+<script>
+    (function() {
+      // Filter Tabs behavior
+      const filterTabs = document.querySelectorAll('#gig-filter-tabs .filter-btn');
+      filterTabs.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          filterTabs.forEach(function(b) {
+            b.classList.remove('bg-ink', 'text-on-primary', 'shadow-sm');
+            b.classList.add('text-muted');
+          });
+          btn.classList.add('bg-ink', 'text-on-primary', 'shadow-sm');
+          btn.classList.remove('text-muted');
+        });
+      });
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-card mt-auto relative"><div class="h-1.5 w-full bg-gradient-to-r from-brand-pink via-brand-ochre to-brand-mint"></div><div class="max-w-7xl mx-auto px-gutter pt-margin pb-space-xl"><div class="grid grid-cols-1 md:grid-cols-12 gap-space-xl pb-space-xl"><div class="md:col-span-5 flex flex-col items-start gap-space-md"><div class="flex items-center gap-space-sm"><img alt="SkillSwap Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VtuUSGDnKXm_MHWk_C8t2G6IMHwA4vTDoUnMEjlQOR_uQaHaJDmQWtb5EXqqc5_mydbLjxJmXXgaIeXqZiaRW5RdvkRI8wna9nGS1sLrJl3OovsXsLsdWAL0vriGttOPde3VXlLkjn5TnmYIgCmjf6F0uRWYUwbKdjV7l3cQLCVCQZzYY8zGgayfoy4baFt6tfuyQseSrM5dV79KvnkMNBozVFxw37b9fh_VA63zzg28e9Qs8bDzG0FQ"/><span class="font-display-sm text-title-md text-ink font-bold tracking-tight">SkillSwap</span></div><p class="font-body-md text-body-md text-muted max-w-sm">The marketplace where young talent ships work and gets paid.</p><div class="inline-flex items-center gap-space-xs px-space-md py-1 bg-surface-strong rounded-full text-caption text-ink font-semibold"><span class="w-2 h-2 rounded-full bg-success animate-pulse"></span>14,800+ Active Projects Today</div></div><div class="md:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-space-lg"><div class="flex flex-col gap-space-sm"><span class="font-caption-uppercase text-caption-uppercase text-on-surface-variant">Categories</span><div class="flex flex-col gap-2"><a class="font-body-sm text-body-sm text-muted hover:text-ink transition-colors" data-path="marketplace" href="index.html">Design &amp; 3D Clay</a><a class="font-body-sm text-body-sm text-muted hover:text-ink transition-colors" data-path="marketplace" href="index.html">Creative Direction</a><a class="font-body-sm text-body-sm text-muted hover:text-ink transition-colors" data-path="marketplace" href="index.html">Motion &amp; VFX</a><a class="font-body-sm text-body-sm text-muted hover:text-ink transition-colors" data-path="marketplace" href="index.html">Prompt Engineering</a></div></div><div class="flex flex-col gap-space-sm"><span class="font-caption-uppercase text-caption-uppercase text-on-surface-variant">Marketplace</span><div class="flex flex-col gap-2"><a class="font-body-sm text-body-sm text-muted hover:text-ink transition-colors" data-path="marketplace" href="index.html">Explore Gigs</a><a class="font-body-sm text-body-sm text-muted hover:text-ink transition-colors" data-path="post-a-gig" href="post-gig.html">Post New Service</a><a class="font-body-sm text-body-sm text-muted hover:text-ink transition-colors" data-path="creator-dashboard" href="dashboard.html">Creator Hub</a><a class="font-body-sm text-body-sm text-muted hover:text-ink transition-colors" data-path="my-bookings" href="bookings.html">Trust & Safety</a></div></div><div class="flex flex-col gap-space-sm"><span class="font-caption-uppercase text-caption-uppercase text-on-surface-variant">Platform</span><div class="flex flex-col gap-2"><a class="font-body-sm text-body-sm text-muted hover:text-ink transition-colors" href="#">Community Guidelines</a><a class="font-body-sm text-body-sm text-muted hover:text-ink transition-colors" href="#">Clay Design Guild</a><a class="font-body-sm text-body-sm text-muted hover:text-ink transition-colors" href="#">Privacy &amp; Terms</a><a class="font-body-sm text-body-sm text-muted hover:text-ink transition-colors" href="#">Security Vault</a></div></div></div></div><div class="pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md text-caption text-muted-soft"><p>© 2025 SkillSwap Network Inc. Handcrafted for next-gen builders.</p><div class="flex items-center gap-space-md"><span class="inline-flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-brand-ochre"></span>All Systems Operational</span><span>UTC 14:32</span></div></div></div></footer><script src="api-client.js"></script><script src="app.js"></script><script src="hydrate.js"></script></body></html>

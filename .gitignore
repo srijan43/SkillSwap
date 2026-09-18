@@ -1,0 +1,17 @@
+# Backend
+backend/node_modules/
+backend/dist/
+backend/.env
+backend/prisma/dev.db
+backend/prisma/dev.db-journal
+
+# Frontend
+frontend/images/*.jpg
+frontend/images/*.png
+
+# System
+.DS_Store
+Thumbs.db
+*.log
+update_links.py
+
