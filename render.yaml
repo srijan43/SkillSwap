@@ -1,5 +1,4 @@
 # Render blueprint. Deploy via https://render.com/docs/blueprint-spec.
-# One free web service + a shared Neon/Render Postgres URL supplied via env.
 services:
   - type: web
     name: skillswap-backend
@@ -16,7 +15,7 @@ services:
       - key: DATABASE_URL
         sync: false            # paste in Render dashboard; do NOT commit
       - key: CORS_ORIGIN
-        sync: false            # e.g. https://skillswap-frontend.onrender.com
+        value: "*"             # Allow all origins to connect
       - key: PLATFORM_FEE_PERCENT
         value: "5"
       - key: RUSH_SURCHARGE_PAISE
@@ -31,3 +30,13 @@ services:
       sizeGB: 1
     healthCheckPath: /health
     autoDeploy: true
+
+  - type: web
+    name: skillswap-frontend
+    env: static
+    plan: free
+    rootDir: frontend
+    buildCommand: ""
+    staticPublishPath: .
+    autoDeploy: true
+
